@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 20170808001946) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +22,7 @@
     t.boolean  "occupied"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
 
   create_table "case_managers", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

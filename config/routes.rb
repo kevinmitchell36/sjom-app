@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get "/beds/:id/edit" => "beds#edit"
   patch "/beds/:id" => "beds#update"
 
+  
+
 end
