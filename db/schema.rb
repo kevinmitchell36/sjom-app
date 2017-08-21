@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170808001946) do
+
+ActiveRecord::Schema.define(version: 20170818001506) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +24,8 @@ ActiveRecord::Schema.define(version: 20170808001946) do
     t.boolean  "occupied"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "resident_id"
+
   end
 
   create_table "case_managers", force: :cascade do |t|
@@ -67,8 +71,20 @@ ActiveRecord::Schema.define(version: 20170808001946) do
     t.boolean  "documented"
     t.string   "gender"
     t.string   "ethnicity"
+<<<<<<< HEAD
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+=======
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "bed_id"
+    t.string   "resident_race"
+    t.string   "cause_of_homeslessness"
+    t.string   "length_of_homelessness"
+    t.string   "prior_living_situation"
+    t.integer  "number_of_shelters"
+    t.boolean  "chronically_homeless"
+>>>>>>> 4388cc8f573f5e3a47be0afe6f05b57950e74d6a
   end
 
   create_table "securities", force: :cascade do |t|
@@ -88,6 +104,7 @@ ActiveRecord::Schema.define(version: 20170808001946) do
     t.index ["reset_password_token"], name: "index_securities_on_reset_password_token", unique: true, using: :btree
   end
 
+<<<<<<< HEAD
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -105,4 +122,6 @@ ActiveRecord::Schema.define(version: 20170808001946) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+=======
+>>>>>>> 4388cc8f573f5e3a47be0afe6f05b57950e74d6a
 end
