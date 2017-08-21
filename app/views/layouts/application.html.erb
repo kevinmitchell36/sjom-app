@@ -9,15 +9,7 @@
   </head>
 
   <body>
-  <% if case_manager_signed_in? %>
-  <li>
-  <%= link_to('sign_out', destroy_case_manager_session_path, method: :delete) %>        
-  </li>
-<% else %>
-  <li>
-  <%= link_to('sign_in', case_manager_session_path)  %>  
-  </li>
-<% end %>
+  
      <%= yield %>
   </body>
 </html>
