@@ -1,5 +1,6 @@
 class ResidentsController < ApplicationController 
-
+  
+  
   def index 
     @residents = Resident.all 
     render "index.html.erb" 
